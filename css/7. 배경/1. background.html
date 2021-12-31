@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 550px;
+            height: 350px;
+            border: 2px solid tomato;
+            /* background-color: salmon;
+            background-image: url('./images/tulip.jpg');
+            background-size: cover;  */
+            /*  background-size:
+            contain: 짧은 쪽에 맞춰서 비율이 맞춰짐 , 이미지 원본을 유지하지만 약간 background가 보일 수 있음 
+            cover: 더 긴 쪽에 맞춰서 비율이 맞춰짐 , 박스를 다 맞춰지긴하지만 이미지가 짤릴수가 있음
+            */
+            /* background-position: 50% 50% ;
+            background-repeat: no-repeat; */
+            /* 색상 경로 반복여부 위치 / 크기*/
+            background: salmon url('./images/tulip.jpg') no-repeat 0% 0% / cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

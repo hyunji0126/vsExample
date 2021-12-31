@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <style>
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.4;
+            padding: 10px;
+        }
+
+        .container {
+            border: 3px solid orange;
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            border: 3px solid yellow;
+        }
+
+        nav {
+            border: 3px solid purple;
+            width: 150px;
+            height: 250px;
+            float: left;
+        }
+
+        section {
+            border: 3px solid green;
+            margin-left: 155px;
+        }
+        /* text는 보여야하기떄문에 float 밑으로 들어가지않음 */
+        footer {
+            border: 3px solid blue;
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>float 속성을 이용한 레이아웃</h1>
+    <div class="container">
+        <header>  
+            <H2>header 영역</H2>
+        </header>
+        <div class="main-content clearfix">
+            <nav>
+                <h2>nav영역</h2>
+            </nav>
+            <section>
+                <h2>section영역</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et ligula maximus tortor cursus mollis at
+                    nec urna. Nunc nunc mauris, accumsan vestibulum interdum id, scelerisque nec mi. Suspendisse sodales
+                    dictum vulputate. Integer laoreet ante turpis, in egestas dui vehicula sit amet. Proin id purus rutrum,
+                    semper tellus aliquam, gravida est. Nam aliquet blandit venenatis. Sed sed interdum mauris. Nulla non
+                    erat lacus. Pellentesque bibendum convallis venenatis. Integer eget tempor libero, et euismod nibh.
+                    Aliquam tempus, sapien in tempus euismod, dolor augue aliquam libero, nec pellentesque tortor magna ut
+                    odio. Quisque vel purus tempor, iaculis purus et, posuere ligula. Sed vel libero interdum, finibus ipsum
+                    dignissim, ultrices lacus.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et ligula maximus tortor cursus mollis at
+                    nec urna. Nunc nunc mauris, accumsan vestibulum interdum id, scelerisque nec mi. Suspendisse sodales
+                    dictum vulputate. Integer laoreet ante turpis, in egestas dui vehicula sit amet. Proin id purus rutrum,
+                    semper tellus aliquam, gravida est. Nam aliquet blandit venenatis. Sed sed interdum mauris. Nulla non
+                    erat lacus. Pellentesque bibendum convallis venenatis. Integer eget tempor libero, et euismod nibh.
+                    Aliquam tempus, sapien in tempus euismod, dolor augue aliquam libero, nec pellentesque tortor magna ut
+                    odio. Quisque vel purus tempor, iaculis purus et, posuere ligula. Sed vel libero interdum, finibus ipsum
+                    dignissim, ultrices lacus.
+                </p>
+            </section>
+        </div>
+        <footer>
+            <h2>footer영역</h2>
+        </footer>
+    </div>
+</body>
+
+</html>
