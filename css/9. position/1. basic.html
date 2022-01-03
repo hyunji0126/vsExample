@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 400px;
+            height: 300px;
+            border: 4px dashed lightgray;
+            margin: 100px 0;
+            position: relative;
+        }
+
+        .box {
+            width: 150px;
+            height: 100px;
+            background: red;
+            border: 4px dashed orange;
+            position: absolute;
+            /* absolute 부모 기준으로 움직임 이떄 부모 요소에 postion을 relative 지정해줘야함, 부모요소에 positon을 주지않으면 body를 부모로 인식함 */
+            left: 160px; /* position을 relative, 기존 left를 기준으로 이동 */
+            bottom: 150px; /* px, % 둘 다 사용 가능함. */
+
+        }
+    </style>
+</head>
+<body>
+    <!-- 부모요소에 postition : relative가 들어간다.
+    들어가지 않으면 body기준으로 좌표가 잡힌다. -->
+    <!-- left, right / top, bootom 중에서 하나만 사용/ 같이 사용하지않음. -->
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
