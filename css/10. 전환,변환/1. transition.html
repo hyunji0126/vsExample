@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            background: red;
+
+            /*
+            transition-property: width;
+            transition-duration: 2s;  변환 효과 지속 시간 
+            transition-property: background;
+            transition-duration: 700ms; 
+            */
+            /* transition: width 2s, background 700ms ease-in; */
+            transition: 1s cubic-bezier(0.64 , 0, 0.32, 1.6);
+            transition-delay: 2s;
+        }
+
+        .box:hover {
+            width: 300px;
+            background: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
