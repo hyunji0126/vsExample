@@ -1,0 +1,147 @@
+/*======= 웹 폰트 선언 =======*/
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+/* 디자인 시작 시 기본적으로 선언하는 문법 */
+* {
+    /* 기본 선언: 마진, 패딩 0, 요소 크기를 border를 기준으로.*/
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,html {
+    width: 100%;
+    min-width: 320px;
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+img {
+    max-width: 100%;
+    /*사이즈가 변해도 넓이를 유지*/
+    height: auto;
+    /* 사이즈가 변해도 비율을 유지 */
+}
+
+input,
+textarea,
+button,
+select {
+    /* 고유하게 적용되어있는 form 관련 요소들을 제거해서
+     여러 브라우저에서 동일한 디자인을 얻게 함.*/
+    -webkit-appearance: none;
+    /*크롬, 사파리  (얘넨 같이 다님) */
+    -moz-appearance: none;
+    /*파이어폭스*/
+    appearance: none;
+    /*ie, edge*/
+    border: none;
+}
+
+ul,ol,dl,li {
+    /*리스트 스타일은 사용할 일이 많지 않아요.*/
+    list-style: none;
+}
+
+.btn {
+    border-radius: 0px;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ==== header ==== */
+header {
+    position: fixed;
+    padding: 0 15px;
+    width: 100%;
+    z-index: 50;
+    background: #263238;
+    /* line-height: 36px%; */
+}
+
+header .container {
+    padding: 0;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-brand {
+    padding: 10px 15px;
+}
+
+.nav > li > a {
+    font-size: 15px;
+    color: white;
+}
+
+/* 메뉴에 hover, focus진행시 색상 변경 */
+.nav li a:hover, .nav li a:focus {
+    background: #304047;
+} 
+
+/* 토글메뉴 (화면이 작아졌을 떄의 메뉴) 윤곽색 변경 */
+.navbar-toggle {
+    border-color: white;
+}
+
+.navbar-toggle > .icon-bar {
+    background: white;
+}
+
+/* 로그인 메뉴 드롭다운 열릴 시 배경색 변경 */
+.nav .open a:focus {
+    background: #304047;
+}
+
+/* ==== 본문 ==== */
+.prod-link > .arrow {
+    display: block; /* 인라인 요소는 position 속성 사용 불가 */
+    position: absolute;
+    left: 15px;
+    bottom: 36px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    background: #ccc;
+    color: #fff;
+    opacity: 1; /* 투명도 */
+}
+
+.prod-link .hover {
+    width: 100px;
+    background: #4285f4;
+    opacity: 0;
+    text-align: center;
+}
+
+.prod-link:hover .arrow {
+    opacity: 0;
+}
+
+.prod-link:hover .hover {
+    opacity: 1;
+}
+
+.dropdown-menu li a{
+    color: darkgray;
+}
+
+.dropdown-menu li a:hover{
+    color: lightgray;
+}
+
+
+
+
+
+
+
+
+
+
+

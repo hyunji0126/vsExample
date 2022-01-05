@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .box {
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            border-radius: 10px;
+            margin: 30px;
+            animation: move 2s 2s 2;
+            animation-fill-mode: both;
+            /* animation-fill-mode는 반복횟수 뒤에 기재해두면 됨
+            none : 애니매이션 시작으로 다시 돌아감 
+            forwards : 애니메이션 동작하고 끝위치에서 종료 다시 기존위치나 애니메이션 동작 시작위치로 돌아오지않음
+            back : 애니메이션 동작진행 후 기존 위치로 돌아감
+            both : 애니메이션 동작후 기존위치로 돌아가지않고 애니메이션 동작위치에서 놈
+            */
+        }
+        @keyframes move {
+            0% {
+                transform: translate(100px, 100px);
+                background: dodgerblue;
+            }
+            
+            100% {
+                transform: translate(300px, 100px);
+                background: yellowgreen;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
