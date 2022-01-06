@@ -22,10 +22,7 @@ img {
     /* 사이즈가 변해도 비율을 유지 */
 }
 
-input,
-textarea,
-button,
-select {
+input, textarea, button, select {
     /* 고유하게 적용되어있는 form 관련 요소들을 제거해서
      여러 브라우저에서 동일한 디자인을 얻게 함.*/
     -webkit-appearance: none;
@@ -59,7 +56,8 @@ header {
     width: 100%;
     z-index: 50;
     background: #263238;
-    /* line-height: 36px%; */
+    left: 0;
+    top: 0;
 }
 
 header .container {
@@ -99,6 +97,29 @@ header .container {
 }
 
 /* ==== 본문 ==== */
+
+
+
+
+/* 섹션 전체에 패딩추가 */
+.prod-list, .prod-link {
+    border: 1px solid #ddd;
+    display: block;
+    text-align: center;
+}
+
+/*
+    기본 부트스트랩의 패딩은 15px,
+    ul과 li사이, li와 li사이의 패딩을 줄이겠습니다.
+*/
+.prod-list, .prod-list > li[class^="col-"]{
+    padding: 5px;
+}
+
+/* 상품을 hover시 테두리 빛나게 */
+.prod-link:hover {
+    border-color: #4285f4;
+}
 .prod-link > .arrow {
     display: block; /* 인라인 요소는 position 속성 사용 불가 */
     position: absolute;
@@ -135,13 +156,201 @@ header .container {
     color: lightgray;
 }
 
+/* ==== footer ==== */
+footer {
+    margin-top: 70px;
+    background: #304047;
+    padding: 30px 0 15px;
+}
 
+footer .copyright {
+    font-size: 13px;
+    color: #fff;
+    line-height: 20px;
+}
 
+footer .footer-menu {
+    display: inline-block;
+    padding: 0 10px;
+}
 
+footer .footer-menu li a {
+    font-size: 13px;
+}
 
+/* ====================================== join ==================================== */
+.titlebox {
+    width: 250px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    margin: 70px auto;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    font-size: 20px;
+}
 
+.join-form {
+    margin: 0 auto;
+    float: none;
+}
 
+.join-form form {
+    border-radius: 8px;
+    padding: 15px;
+    /* 
+    box-shadow : 1,2,3,4,color
+    1 : 수평방향 그림자 위치 -> 양수:오른쪽/ 음수:왼쪽
+    2 : 수직방향 그림자 위치 -> 양수:박스아래/ 음수:박스위
+    3 : 그림자 선명도 -> 양수 : 그림자 끝이 흐려짐, 음수:x
+    4 :  그림자 확산 거리 -> 양수:확대/음수:축수
+    color : 그림자의 색상
+    */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+}
 
+.input-group-addon {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+}
 
+.form-control, .form-group .btn {
+    border-radius: 0;
+}
 
+.form-control:hover {
+    border-color: #555;
+}
+
+/* ==================board-list================= */
+.board-table {
+    margin: 0 auto;
+    float: none;
+}
+
+.search-wrap {
+    margin-bottom: 20px;
+}
+
+.search-btn,
+.search-input,
+.search-select {
+    float: right;
+}
+
+.search-input {
+    width: 200px;
+}
+
+.search-select {
+    width: 100px;
+}
+
+.table-bordered > thead > tr > th {
+    background: #e7f2f9;
+}
+
+.table-bordered > tbody > tr > td > a , 
+.table-bordered > tbody > tr > td > a:hover {
+    color: black;
+} 
+
+.pagination {
+    margin: 0;
+}
+
+.text-center .btn {
+    float: right;
+    border: 0;
+    border-radius: 0;
+    padding: 5px 10px;
+}
+
+/* ========================= write ========================== */
+.t-control .t-title {
+    width: 100px;
+}
+
+.t-control input {
+    width: 200px;
+}
+.write-wrap {
+    width: 70%;
+    margin: 0 auto;
+    float: none;
+}
+
+.t-control textarea {
+    resize: none; /*textarea 고정*/
+}
+
+.titlefoot {
+    text-align: center;
+    margin: 40px auto;
+}
+
+/* ================= content =================== */
+.content-wrap {
+    margin: 0 auto;
+    float: none;
+}
+
+.btn-dark {
+    background: #303030;
+    color: #fff;
+}
+
+.content-wrap #content {
+    resize: none;
+}
+
+/* ======================= 댓글 =========================== */
+.reply-wrap {
+    background: #f5f5f5;
+    padding: 15px;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+.reply-wrap .reply-image {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+.reply-wrap .reply-content {
+    padding-left: 60px;
+}
+
+.reply-content textarea {
+    range: none;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.reply-input > .form-control {
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+.reply-input {
+    float: left;
+}
+
+.reply-group button {
+    float: right;
+}
+
+.reply-group small {
+    margin-left: 10px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.reply-group a {
+    text-decoration: none;
+    color: #777;
+    float: right;
+}
 
