@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>identifier</title>
+</head>
+<body>
+  <script>
+    // JavaScript가 Java보다 문법적 엄격함이 덜하다. 변수명 동일해도 변수선언가능
+    var apple = '사과';
+    var apple = '애플';
+    console.log(apple);
+
+    // 대소문자 구별함
+    var banana = '바나나';
+    var BANANA = '빠나나';
+    console.log(banana);
+    console.log(BANANA);
+
+    // 식별자이름 숫자로 지정 불가
+    // var 700 = 700;
+    // var 7num = 7; 식별자명이 숫자로 시작 x
+    var num7 = 7;
+
+    // $ _ 이외의 특수문자는 식별자로 사용 불가
+    // var my-name = '홍길동';
+    //JavaScript는 카멜케이스 사용 x 
+    var myName = '홍길동';
+    var my_name = '홍길동';
+    var $my_name = '홍길동';
+    //$가 변수명에 들어가있는건 특정 웹에 요소를 담고있을떄 사용
+
+    var myPhoneNumber = '01012345678';//carmel
+    var myphonenumber = '01012345678';//snake
+    var MyPhoneNumber = '01012345678';//pascal
+    var strMyPhoneNumber = '01012345678';//Hungarian 변수명 맨 앞에 타입까지 작성해서 선언하는경우
+
+    var 과일 = '사과';
+    console.log(과일);
+  </script>
+</body>
+</html>

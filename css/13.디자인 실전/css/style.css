@@ -9,34 +9,29 @@
     box-sizing: border-box;
 }
 
-body,html {
+body, html {
     width: 100%;
     min-width: 320px;
     font-family: "Nanum Gothic", sans-serif;
 }
 
 img {
-    max-width: 100%;
-    /*사이즈가 변해도 넓이를 유지*/
-    height: auto;
-    /* 사이즈가 변해도 비율을 유지 */
+    max-width: 100%; /*사이즈가 변해도 넓이를 유지*/
+    height: auto; /* 사이즈가 변해도 비율을 유지 */
 }
 
 input, textarea, button, select {
     /* 고유하게 적용되어있는 form 관련 요소들을 제거해서
      여러 브라우저에서 동일한 디자인을 얻게 함.*/
-    -webkit-appearance: none;
-    /*크롬, 사파리  (얘넨 같이 다님) */
-    -moz-appearance: none;
-    /*파이어폭스*/
-    appearance: none;
-    /*ie, edge*/
+    -webkit-appearance: none; /*크롬, 사파리*/
+    -moz-appearance: none; /*파이어폭스*/
+    appearance: none; /*ie, edge*/
     border: none;
 }
 
-ul,ol,dl,li {
+ul, ol, dl, li {
     /*리스트 스타일은 사용할 일이 많지 않아요.*/
-    list-style: none;
+    list-style: none; 
 }
 
 .btn {
@@ -49,15 +44,16 @@ ul,ol,dl,li {
     clear: both;
 }
 
-/* ==== header ==== */
+
+/*=========== header ===========*/
 header {
     position: fixed;
     padding: 0 15px;
+    left: 0;
+    top: 0;
     width: 100%;
     z-index: 50;
     background: #263238;
-    left: 0;
-    top: 0;
 }
 
 header .container {
@@ -77,12 +73,12 @@ header .container {
     color: white;
 }
 
-/* 메뉴에 hover, focus진행시 색상 변경 */
+/* 메뉴에 hover, focus 진행 시 색상 변경 */
 .nav li a:hover, .nav li a:focus {
     background: #304047;
-} 
+}
 
-/* 토글메뉴 (화면이 작아졌을 떄의 메뉴) 윤곽색 변경 */
+/* 토글메뉴(화면이 작아졌을 때의 메뉴) 윤곽색 변경 */
 .navbar-toggle {
     border-color: white;
 }
@@ -95,10 +91,11 @@ header .container {
 .nav .open a:focus {
     background: #304047;
 }
-
 /* ==== 본문 ==== */
 
-
+section {
+    margin-top: 75px;
+}
 
 
 /* 섹션 전체에 패딩추가 */
@@ -169,12 +166,13 @@ footer .copyright {
     line-height: 20px;
 }
 
-footer .footer-menu {
+footer .footer-menu li {
     display: inline-block;
     padding: 0 10px;
 }
 
 footer .footer-menu li a {
+    color: #f1f1f1;
     font-size: 13px;
 }
 
@@ -354,3 +352,77 @@ footer .footer-menu li a {
     float: right;
 }
 
+/* ===================== board2(이미지 게시판) ======================= */
+.prod-list-inner img {
+    width: 100%;
+}
+.prod-content {
+    padding: 15px 0;
+}
+  
+.prod-content .info span {
+    display: block;
+}
+
+.prod-content .info {
+    float: left;
+}
+
+.prod-content .price {
+    float: right;
+}
+
+.prod-color {
+    margin-top: -35px;
+    float: left;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.prod-color li {
+    width: 50px;
+    float: left;
+}
+
+.prod-list-inner:hover .prod-color {
+    opacity: 1;
+}
+
+
+/* ==================== board2_deatil ====================== */
+.detail-info {
+    margin-bottom: 120px;
+}
+.detail-info .title {
+    font-size: 24px;
+}
+.detail-info .price {
+    font-size: 30px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+.detail-info .delivery {
+    color: #888;
+}
+
+.detail-control .left {
+    float: left;
+}
+.detail-control .right {
+    float: right;
+}
+.detail-control .price .left {
+    font-size: 18px;
+    line-height: 45px;
+}
+.detail-control .price .right {
+    font-size: 30px;
+}
+
+.detail-control .order .left,
+.detail-control .order .right {
+    width: 50%;
+    height: 60px;
+    font-size: 18px;
+}

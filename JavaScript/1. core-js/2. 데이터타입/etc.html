@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ect</title>
+</head>
+<body>
+  <script>
+    // 논리타입
+    var logical = false;
+    logical = true;
+
+    // logical = True; (X) 대문자로 키워드 작성하면 인식못함
+
+    var apple = 0; //JavaScript에서 정수타입 0은 false, 0이 아닌수는 true로 인식한다.
+    if(apple) {
+      console.log('사과가' + apple + '개 있습니다.');
+    } else {
+      console.log('사과가 하나도 없습니다.');
+    }
+
+    // null
+    var banana;
+    console.log(typeof banana); //undefined라고 나옴 값을 넣지 않았기 때문에, 초기화x
+
+    banana = '바나나';
+    console.log(typeof banana); //string으로 나옴
+
+    banana = null;
+    console.log(typeof banana); //object로 나옴 , null은 의도적으로 값을 넣지않은것
+
+
+  </script>
+</body>
+</html>
