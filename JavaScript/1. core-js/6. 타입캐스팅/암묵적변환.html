@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    var ex = 10 + '20';//1020 타입이 다라서
+    console.log('ex : ' + ex);
+
+    ex = 10 * '3';//*는 문자열에서 지원하지않는 연산자
+    console.log('ex : ' + ex);
+    
+    var ex2 = 100 + ''; //'100'
+    // 문자열 타입의 암묵적 숫자 변환
+    ex2 = +'550';
+
+    ex2 = true + '';
+    ex2 = +false;//논리형 타입의 암묵적 숫자 변환
+
+    ex2 = +null;
+    
+    console.log(ex2);
+    console.log(typeof ex2);
+
+
+  </script>
+</body>
+</html>
