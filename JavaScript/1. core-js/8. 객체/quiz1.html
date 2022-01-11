@@ -18,19 +18,37 @@
       4. name의 값을 Pete로 수정해보세요.
       5. user에서 프로퍼티 name을 삭제하세요.
     */
-    var user;
+    var user = {};
+    user.name = 'John';
+    user.surname = 'Smith';
+    user.name = 'Pete';
+    delete user.name; //delete하고 .없음, delete.user.name;해서 에러났었음
+    console.log(user);
  
     /*
       Q2. 모든 팀원의 월급에 대한 정보를 담고있는 
       객체가 있다고 가정해 봅시다.
       변수이름 salaries, 세명의 월급정보를 직접 작성하세요.
     */
+    var salaries = {
+      kim : 1000000,
+      park : 1600000,
+      lee : 130000
+    }
 
     /*
     - 모든 팀원의 월급을 합한 값을 구하고,
      그 값을 변수 total에 저장해 주는 코드를 작성 후
      평균 월급을 구해 보세요.
     */
+
+    var total = 0;
+    for(var key in salaries) {
+      total += salaries[key];
+    }
+    console.log('급여 총합 : ' + total +'원');
+    var avg = total / 3;
+    console.log('급여 평균 : ' + avg + '원');
   </script>
 </body>
 

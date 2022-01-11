@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 함수저의
+    // 함수 이름은 동사적 기능이 내포되게 짓습니다.
+    function calcTotal(x) {
+      // x는 매개변수
+      console.log('함수가 호출됨!');
+      var total = 0;
+      for (var n = 1; n <= x; n++) {
+        total += n;
+      }
+      return total;
+      // java와 다른점 리턴타입이 없음, function으로 시작됨
+    }
+
+    function add1(n1, n2) {
+      return n1 + n2;
+    }
+
+    // 함수 리터럴
+    var add2 = function(n1, n2) {
+      return n1 + n2;
+    }
+    
+    // 화살표 함수(ES6)
+    // var add3 = (n2, n2) => n1 + n2;
+    var add3 = (n1, n2) => {
+      return n1 + n2;
+    }
+    console.log(calcTotal(10));
+    
+    var result = calcTotal(50);
+    console.log('result : ' + result);
+    
+    console.log('add1 : ' + add1(10, 20));
+    console.log('add2 : ' + add2(20, 30));
+    console.log('add3 : ' + add2(30, 40));
+
+    // 함수를 변수에 할당할 수 있습니다.
+    var ct = calcTotal;
+    var result2 = ct(200);
+    console.log(result2);
+  </script>
+</body>
+
+</html>

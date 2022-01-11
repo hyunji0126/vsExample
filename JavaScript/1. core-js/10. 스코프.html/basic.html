@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    
+    var x = 'global';
+
+    function foo(y) {
+       var x = 'local';
+       console.log('x : ' + x); //local
+       console.log('y : ' + y); //parameter
+    }
+
+    console.log('x : ' + x); //global
+    //console.log('y : ' + y);//y는 지역변수로 함수안에서만 출력가능, error
+    foo('parameter');
+
+  </script>
+</body>
+</html>

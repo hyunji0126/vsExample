@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // ES6에서 새롭게 나옴
+    const x ='메롱';
+    // const x; 이렇게 선언만하는건 불가
+    console.log(x);
+    // x ='안메롱'; 값의 변경이 불가능
+
+    // const와 객체(객체, 배열, 함수)
+    const person = {
+      name : 'park',
+      age : 20
+    };
+    person.name = 'kim';
+    console.log(person);
+
+    /* 에러--
+    새롭게 대입하는건 불가
+    person = {
+      name : 'lee',
+      age : 33
+    };
+    */
+  </script>
+</body>
+</html>
