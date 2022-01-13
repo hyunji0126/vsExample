@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <label>
+    <input type="checkbox">
+    <em class="message"></em>
+  </label>
+
+  <script>
+    const $checkbox = document.querySelector('input[type="checkbox"]');
+    const $em = document.querySelector('.message');
+    // 'change' : 요소의 값이 변경되었을때 감지해주는 이벤트 종류
+    $checkbox.addEventListener('change', e => { //매개값 하나면(e) => 이렇게 하지말고 e => 이렇게 해도됨
+      // 실제로 이벤트 일어난 요소
+      // console.log(e.target);
+
+      console.log(e);
+
+      $em.textContent = e.target.checked ? '체크됨!' : '체크안됨!';
+
+      /*
+        if(e.target.checked) {
+          $em.textContent = '체크됨!';
+        } else {
+          $em.textContent = '체크 안됨!';
+        }
+        */
+    });
+  </script>
+</body>
+
+</html>

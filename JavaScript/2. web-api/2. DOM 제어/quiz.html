@@ -35,7 +35,7 @@
     $chng.textContent = '리스트_2'
     $list.replaceChild($chng, $list.firstElementChild);
     */
-  //  선생님 답
+  //  선생님 풀이
     const $obj1 = document.querySelector('.obj1');
     $obj1.textContent = '리스트_2';
 
@@ -59,14 +59,16 @@
     $list.removeChild($list.firstElementChild);
 
     //7. id="list"인 요소의 전체 자식 요소 삭제
-    /*내답*/
+    /* 내 답 - 이렇게 써도 된다함 */
     $list.innerHTML = '';
     console.log(!!$list.children.length); 
 
-    // const $children = [...$list.children];
-    // for(let $li of $children) {
-    //   $list.removeChild($li);
-    // }
+    /*선생님 풀이
+    const $children = [...$list.children];
+    for(let $li of $children) {
+      $list.removeChild($li);
+    }
+    */
   </script>
 </body>
 
