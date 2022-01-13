@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>data-attr</title>
+</head>
+<body>
+  <ul id="users">
+    <li id="1" data-user-id="kim1234" data-role="common">Kim</li> <!--data-user-id 랑 data-role은 내가 만든 속성 javascript때 쓰려고 -->
+    <li id="2" data-user-id="park1234" data-role="admin">Park</li> <!-- data-user-id , data-role 이렇게 쓰는건 "케밥케이스"라고 한다.-->
+    <!-- <li id="3" data-user-id="choi1234" data-role="admin">Choi</li> -->
+  </ul>
+
+  <script>
+    const $users = document.querySelector("#users");
+    //배열 디스트럭처링
+    const[$user1, $user2] = [...$users.children];
+
+    console.log($user1.getAttribute('data-role'));
+    console.log($user1.dataset);
+    console.log($user1.dataset.role);
+    console.log($user1.dataset.userId);
+    
+    $user2.dataset.role = "anonymous";
+    $user2.dataset.userTelNumber = "010-1234-5678"; //element보면 telnumber들어가있음
+    
+    // body를 얻는 법
+    const $body = document.body;
+    console.log($body);
+
+    // html태그를ㄹ 얻는 법
+    const $html = document.documentElement;
+    console.log($html);
+  </script>
+
+</body>
+</html>

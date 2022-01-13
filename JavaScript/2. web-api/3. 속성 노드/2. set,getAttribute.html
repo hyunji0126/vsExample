@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>set,getAttribute</title>
+</head>
+<body>
+  <input type="text" id="name" value="kim" class="user-name">
+
+  <p id="text">Hello</p>
+
+  <script>
+    const $input = document.querySelector('input[type="text"]'); //input이 여러개일때 속성 지정해서 이런식으로 선택할 수 있음
+
+    // input의 value 속성의 값을 얻고 싶다.
+    // const $inputValue = $input.attributes.value.value; //방법1
+    const inputValue = $input.getAttribute('value'); //방법2
+    console.log(inputValue);
+
+    // value 속성의 값을 변경
+    // $input.attributes.value.value = '메롱';
+    $input.setAttribute('value', '안녕하세요'); //'value'를 '안녕하세요'로 바꾸겠다
+ id
+    // p태그에 title 속성 추가
+    const $paragraph = document.querySelector('#text'); //getElementById로도 사용가능
+    $paragraph.setAttribute('title', '메롱');//'title'을 '메롱'으로 바꿔라 title이 없으면 새로 생성
+    console.log($input.hasAttribute('class'));
+    console.log($paragraph.hasAttribute('merong'));
+
+    if(!$input.hasAttribute('class')) {
+      // 없으면 클래스를 부여해라(setAttribute)
+    } else {
+      // 클래스를 제거해라
+      $input.removeAttribute('class');
+    }
+  </script>
+
+</body>
+</html>
