@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h2>단어를 선택하세요.</h2>
+  <p id="msg"></p>
+  <select id="selector">
+    <option value="select">선택</option>
+    <option value="en">hello</option>
+    <option value="ko">안녕</option>
+    <option value="ca">니하오</option>
+  </select>
+
+  <script>
+    const $selector = document.getElementById('selector');
+    const $msg = document.getElementById('msg');
+
+    $selector.onchange = function(e) {
+      // console.log($selector);
+      // console.log($selector.children);
+
+      /*
+      for($opt of $selector) {
+        if($opt.selected) {
+          // console.log($opt.value);
+          if($opt.value === 'en') {
+            $msg.textContent = '영어입니다.';
+          } else if($opt.value === 'ko') {
+            $msg.textContent = '한국어입니다.';
+          } else if($opt.value === 'ca') {
+            $msg.textContent = '중국어입니다.';
+          } else {
+            $msg.textContent = '단어를 선택하세요.'
+          }
+        }
+      }
+      */
+      // console.log($selector.options.selectedIndex); 
+      console.log($selector.value); //value값 콘솔창에 바로 튀어나옴
+      if($selector.value === 'en') {
+        $msg.textContent = '영어입니다.';
+      } else if ($selector.value === 'ko') {
+        $msg.textContent = '한국어입니다.';
+      } else if ($selector.value === 'ca') {
+        $msg.textContent = '중국어입니다.';
+      } else {
+        $msg.textContent = '단어를 선택하세요';
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -16,11 +16,11 @@
     const $count = document.querySelector('input');
     const $plus = document.querySelector('button[id="plus"]');
     const $minus = document.querySelector('button[id="minus"]');
-    console.log($count);
-    console.log($plus);
-    console.log($minus);
+    // console.log($count);
+    // console.log($plus);
+    // console.log($minus);
    
-
+    /* 내답변
     if($plus.onclick = () => {
       $count.value++
     });
@@ -34,6 +34,21 @@
       }
       
     });
+    */
+
+    $plus.onclick = function (){
+      let value = $count.getAttribute('value');
+      value++;
+      $count.setAttribute('value', value);
+    }
+
+    $minus.onclick = () => {
+      if($count.value == 0) { //=== 은 안됨 parseInt로 변환하는걸로 ==로도 됨
+        alert('0 미만으로 내릴 수 없습니다.');
+        return;
+      } 
+      $count.value--;
+    }
   </script>
 </body>
 </html>
