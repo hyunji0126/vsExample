@@ -13,18 +13,20 @@
     }
 
     thead th {
-      border: 1px solid;
+      border: 1px solid black
     }
   </style>
 </head>
 
 <body>
+
+
   <table>
     <thead>
-      <td>교시</td>
-      <td>훈련과목</td>
-      <td>담당자</td>
-      <td>훈련내용</td>
+      <th>교시</th>
+      <th>훈련과목</th>
+      <th>담당자</th>
+      <th>훈련내용</th>
     </thead>
     <tbody class="todoList">
       <tr class="list">
@@ -40,21 +42,22 @@
   <button id="add1">1개 추가하기</button>
 
   <script>
-    const $todolist = document.querySelector('.todolist');
+    const $todolist = document.querySelector('.todoList');
     const $add1 = document.getElementById('add1');
-    const $add5 = document.getElementById('add5');
-    
+
     $add1.onclick = function () {
-      const $tdClone = $list.cloneNode(true);
       const $list = document.querySelector('.list');
-      $todolist.appendChild($tdClone);
+      const $cloneList = $list.cloneNode(true);
+      $todolist.appendChild($cloneList);
     }
 
     document.getElementById('add5').onclick = function () {
       const $frag = document.createDocumentFragment();
+
       for (let i = 1; i <= 5; i++) {
-        const $tdClone = $list.cloneNode(true);
-        $frag.appendChild($tdClone);
+        const $list = document.querySelector('.list');
+        const $cloneList = $list.cloneNode(true);
+        $frag.appendChild($cloneList);
       }
       $todolist.appendChild($frag);
     }

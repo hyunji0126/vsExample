@@ -16,7 +16,7 @@
   <h2>할일 목록 만들기</h2>
   <div class="name-form">
     <h3 class="name-title"></h3>
-    <input type="text" placeholder="이름을 입력하세요" class="name-input">
+    <input onkeyup="enterkey" type="text" placeholder="이름을 입력하세요" class="name-input">
     <button class="btn1">확인</button>
   </div>
 
@@ -46,9 +46,11 @@
     const $todolist = document.querySelector('.todo-list')
 
     $btn1.addEventListener('click', () => {
-      $nametitle.textContent = $name.value;
+      $nametitle.textContent = $name.value + '님 안녕하세요!';
       document.querySelector('.name-form').removeChild($name);
       document.querySelector('.name-form').removeChild($btn1);
+      // $name.style.display = 'none';
+      // $btn1.style.display = 'none';
     });
 
 
@@ -75,10 +77,7 @@
         })
     });
 
-
-
-
-
+   
   </script>
 </body>
 

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul li {
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>다중이벤트 처리</h3>
+  <div>
+    <ul>
+      <li><img src="./img/1.jpg" alt="봄" width="100px"></li>
+      <li><img src="./img/2.jpg" alt="여름" width="100px"></li>
+      <li><img src="./img/3.jpg" alt="가을" width="100px"></li>
+      <li><img src="./img/4.jpg" alt="겨울" width="100px"></li>
+    </ul>
+    결과 :
+    <div class="result">
+      <img src="./img/1.jpg" alt="결과" width="300px">
+    </div>
+  </div>
+
+  <script>
+    const $resultimg = document.querySelector('.result img')
+    const $imglist = document.querySelectorAll('ul li img');
+
+    /* 방법1
+    for (let $ele of $imglist) {
+      $ele.onclick = function (e) {
+        $resultimg.src = e.target.src;
+      }
+    }
+    */
+    /* 방법2 */
+    const $ul = document.querySelector('ul');
+    $ul.addEventListener('click', function(e) {
+      if(!e.target.matches('ul > li > img')) {
+        return;
+      }
+      $resultimg.src = e.target.src;
+    });
+  </script>
+</body>
+
+</html>
