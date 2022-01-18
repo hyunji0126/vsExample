@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .clock h1 {
+      color: white;
+    }
+
+    .bg-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      animation: fadeIn .5s linear;
+    }
+
+    @keyframes fadeIn {
+      form {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="clock">
+    <h1>00:00:00</h1>
+  </div>
+
+  <script>
+    //시간바꾸기
+    function creatTime() {
+      const $clock = document.querySelector('.clock h1');
+      const date = new Date();
+      const hour = date.getHours();
+      const minute = date.getMinutes();
+      const second = date.getSeconds();
+      const time = (hour < 10 ? '0' + hour : hour) + ':' 
+      + (minute < 10 ? '0' + minute : minute) + ':' + (second < 10 ? '0' + second : second);
+      $clock.textContent = time;
+    }
+    //배경바꾸기
+    let count = 0;
+
+    function changebackground() {
+      const bglist = [1, 2, 3, 4];
+      const $img = document.createElement('img');
+      $img.src = `../6. QUIZ/img/${bglist[count]}.jpg`;
+      $img.classList.add('bg-img');
+      document.body.appendChild($img);
+      count++;
+
+      if (count === bglist.length) {
+        count = 0;
+      }
+    }
+    (function () {
+      changebackground();
+      creatTime();
+      setInterval(creatTime,1);
+      setInterval(changebackground, 10000);
+    })();
+  </script>
+</body>
+
+</html>
