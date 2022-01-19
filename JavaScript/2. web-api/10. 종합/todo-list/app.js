@@ -17,7 +17,37 @@ const todos = [{
 ];
 
 // 추가될 할 일 객체의 id를 생성해 주는 함수 정의.
+const $addtodo = document.getElementById('todo-text');
+const $addBtn = document.getElementById('add');
+const $remove = document.querySelector('.remove');
+const $modify = document.querySelector('.modify');
+console.log($addtodo);
 
+const $todolist = document.querySelector('.todo-list');
+const $todoli = document.querySelector('.todo-list > li')
+const $todolistitem = document.querySelectorAll('.todo-list-item');
+console.log($todolist);
+
+const $deepClone = $todoli.cloneNode(true); 
+console.log($deepClone);
+// console.log([...$deepClone]);
+$addBtn.addEventListener('click',()=>{
+ 
+    $todolist.innerHTML = '';
+    $todolist.appendChild($deepClone);
+   
+  const $span = document.createElement('span');
+  
+  $span.setAttribute('span',$addtodo);
+  $span.appendChild(document.createTextNode($addtodo));
+  
+  console.log($addtodo);
+  
+});
+
+$remove.addEventListener('click',(e)=>{
+  $chgspan.parentElement.remove(e.target);
+});
 // 화면에 표현할 .todo-list-item 노드를 생성하는 함수 정의
 // li를 생성하고 label, div 2개 요소를 생성해서 추가하는 함수
 

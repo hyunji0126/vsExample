@@ -1,0 +1,49 @@
+li {
+  padding: 20px 20px;
+  font-size: 14px;
+}
+
+.todo-template {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 50%; */
+  width: 40%;
+  border: 1px solid;
+  border-radius: 5%;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+
+.wrapper {
+  font-size: 18px;
+  /* background: #8c8c8c; */
+  height: 100vh;
+  position: relative;
+}
+
+.todo-template h1 {
+  text-align: center;
+  background: #62b1c5;
+  padding: 20px 20px;
+  font-weight: 700;
+  border-bottom: 1px solid;
+  /* border-radius: 5%; */
+  color: white;
+}
+
+.todo-insert {
+  background: lightgrey;
+  padding: 0;
+}
+
+.content #todo-text {
+  background: gray;
+  /* color: white; */
+}
+
+#todo-text::placeholder {
+  color: white;
+}

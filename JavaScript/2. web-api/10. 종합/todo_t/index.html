@@ -6,8 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="./app.js" defer></script>
-  <link rel="stylesheet" href="./main.css">
+  <!-- reset.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+  <script src="./app_t.js" defer></script>
+  <link rel="stylesheet" href="./main_t.css">
+  <!--linear icons -->
   <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 </head>
 
@@ -16,7 +20,7 @@
     <section class="todo-template">
       <h1 class="app-title">일정 관리</h1>
       <div class="content">
-        <form class="todo-insert">
+        <form class="todo-insert clearfix">
           <input type="text" id="todo-text" placeholder="할 일을 입력하세요." autocomplete="off">
           <button type="button" id="add"><span class="lnr lnr-plus-circle"></span></button>
         </form>
