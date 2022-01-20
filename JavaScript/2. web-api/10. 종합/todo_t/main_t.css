@@ -122,7 +122,14 @@ section.todo-template .content .todo-list .todo-list-item .checkbox.checked {
   color: #adb5bd;
   text-decoration: line-through;
 }
-
+section.todo-template .content .todo-list .todo-list-item .checkbox .mod-input {
+  margin-left: 4rem;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 200px;
+  padding: 4px;
+  font-size: 12px;
+}
 /* 삭제 모션 */
 .delMoving {
   animation: delMove 1.5s ease-in-out;
